@@ -1,0 +1,287 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22/09/2016, 23:10:06
+    Author     : noebezerra
+*/
+
+/* fonts */
+@font-face {
+  font-family: 'Bangers';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bangers'), local('Bangers-Regular'), url(../fonts/Bangers/yJQgrSMUoqRj-0SbnQsv4g.woff2) format('woff2');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;*/
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(../fonts/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  /*unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;*/
+}
+
+@media print {
+    .print {
+        display:block;
+    }
+   .no-print { 
+        display:none !important; 
+    }  
+    .ingresso img{
+        width: 100% !important;
+        height: 30% !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 auto !important;
+    }
+    .cadastro-ingresso {
+        padding-top: 15% !important;
+    }
+}
+
+
+*{
+    font-family: 'Quicksand', cursive;
+    font-size: 14pt;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+.bg{
+    background-image: url("../img/bg-eventos.jpg");
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: relative;
+}
+.ingresso img{
+    /*background: center;*/
+    width: 60%;
+    height: 40%;
+    top: 30%;
+    left: 20%;
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 60% 40%;
+    position: relative;
+}
+.cadastro-ingresso{
+    padding-top: 10%;
+    width: 420px;
+}
+.cadastro-ingresso tr, .cadastro-ingresso td, .cadastro-ingresso input{
+    color: #000 !important;
+    width: 300px;
+}
+.fundo {
+    position: fixed; /*posição fixa para que a possível rolagem da tela não revele espaços em branco */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.logo{
+    font-family: 'Bangers';
+    padding: 20px 0;
+    /*position: relative;*/
+}
+.box-logo{
+    font-family: 'Bangers';
+    font-size: 30pt;
+    padding: 8px;
+    background: red;
+}
+.logo-span{
+    font-family: 'Bangers';
+    font-size: 58pt; 
+}
+.guia{
+    margin-bottom: 15px;
+    font-family: 'Bangers';
+}
+.box-guia{
+    font-family: 'Bangers';
+    border: 1px dashed #cece78;
+    padding: 10px;
+}
+.border{
+    border: 1px dashed #cece78;
+    padding: 20px;
+    margin: 10px 0;
+}
+.input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+.btn{
+    font-family: arial;
+    font-size:14px;
+    font-weight:700;
+    text-transform: uppercase;
+    border:none;
+    padding:10px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    margin: 10px 0;
+}
+.btn-green{
+    background:green;
+    color:#fff;
+    box-shadow:0 5px 0 #006000;
+}
+.btn-green:hover{
+    background:#006000;
+    box-shadow:0 5px 0 #003f00;
+}
+.btn-pink{
+    background:#ad4592;
+    color:#fff;
+    box-shadow:0 5px 0 #73308e;
+}
+.btn-pink:hover{
+    background:#883673;
+    box-shadow:0 5px 0 #532267;
+}
+.btn-blue{
+    background:#4d61c7;
+    color:#fff;
+    box-shadow:0 5px 0 #31408c;
+}
+.btn-blue:hover{
+    background:#364dc5;
+    box-shadow:0 5px 0 #1d2d80;
+}
+
+/* table */
+.table{
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  margin: auto;
+  max-width: 1024px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+.table th {
+    color: #D5DDE5; 
+    background: #1b1e24;
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+}
+
+.table th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+.table th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+.table tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+.table tr:hover td {
+  background:#D13333;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+  border-bottom: 1px solid #22262e;
+}
+ 
+.table tr:first-child {
+  border-top:none;
+}
+
+.table tr:last-child {
+  border-bottom:none;
+}
+ 
+.table tr:nth-child(odd) td {
+  background:#BA4343;
+}
+ 
+.table tr:nth-child(odd):hover td {
+  background:#D13333;
+}
+
+.table tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+.table tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+.table td {
+    background:#BA4343;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 19px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+}
+
+.table td:last-child {
+  border-right: 0px;
+}
+
+.table th.text-left {
+  text-align: left;
+}
+
+.table th.text-center {
+  text-align: center;
+}
+
+.table th.text-right {
+  text-align: right;
+}
+
+.table td.text-left {
+  text-align: left;
+}
+
+.table td.text-center {
+  text-align: center;
+}
+
+.table td.text-right {
+  text-align: right;
+}

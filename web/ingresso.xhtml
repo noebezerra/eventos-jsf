@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="bg fundo no-print"></div>
+        <div class="ingresso fundo print"><img src="img/ingresso.png"/></div>
+        <center>
+            <h:form>
+                <center class="logo no-print"><span class="box-logo">MEGA</span><br/><span class="logo-span">Eventos</span></center>
+                <div class="guia no-print"><span class="box-guia">> Ingresso</span></div>
+                <h:panelGrid columns="2" class="cadastro-ingresso print">
+                    Parcipante: <h:inputText class="input" id="eventoTxt" value="#{pessoasBean.pessoa.evento}" p:placeholder="Fulano Beitrano Cicrano" />
+                    CPF: <h:inputText class="input" id="cpfTxt" value="#{pessoasBean.pessoa.endereco}" p:placeholder="123.456.789-11"/>
+                    Email: <h:inputText class="input" id="emailTxt" value="#{pessoasBean.pessoa.endereco}" p:placeholder="mail@example.com"/>
+                    Telefone: <h:inputText class="input" id="telefoneTxt" value="#{pessoasBean.pessoa.uf}" p:placeholder="98 999999999"/>
+                    <h:inputHidden/>
+                    <input type="button" class="btn btn-pink no-print" value="Imprimir" onclick="window.print();"/>
+                </h:panelGrid>
+                <br/><br/><br/><br/>
+                <h:commandButton class="btn btn-blue no-print" value="Voltar" action="index" actionListener="#{pessoasBean.limpaDados()}"/>
+            </h:form>
+        </center>
+    </h:body>
+</html>
+

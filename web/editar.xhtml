@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="bg fundo"></div>
+        <h:form>
+            <center>
+                <center class="logo"><span class="box-logo">MEGA</span><br/><span class="logo-span">Eventos</span></center>
+                <div class="guia"><span class="box-guia">> Editar eventos</span></div>
+                <h:panelGrid columns="2">
+                    Id: <h:outputText class="input" value="#{pessoasBean.pessoa.id}"/>
+                    Evento: <h:inputText class="input" value="#{pessoasBean.pessoa.evento}"/>
+                    Endereço: <h:inputText class="input" value="#{pessoasBean.pessoa.endereco}"/>
+                    UF: <h:inputText class="input" value="#{pessoasBean.pessoa.uf}"/>
+                    Cidade: <h:inputText class="input" value="#{pessoasBean.pessoa.cidade}"/>
+                    Data inicial: <h:inputText class="input" value="#{pessoasBean.pessoa.datai}"/>
+                    Data final: <h:inputText class="input" value="#{pessoasBean.pessoa.dataf}"/>
+                    Email: <h:inputText class="input" value="#{pessoasBean.pessoa.email}"/>
+                    Telefone: <h:inputText class="input" value="#{pessoasBean.pessoa.telefone}"/>
+                    <h:commandButton class="btn btn-blue left" value="Voltar" action="index" actionListener="#{pessoasBean.limpaDados()}"/>
+                    <h:commandButton class="btn btn-pink right" value="Atualizar" action="#{pessoasBean.atualizarPessoas}"/>
+                </h:panelGrid>
+            </center>
+        </h:form>         
+    </h:body>
+</html>
+

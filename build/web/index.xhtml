@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <title>JSF 2 Teste</title>
+    </h:head>
+    <h:body>
+        <div class="bg fundo"></div>
+        <center>
+            <h:form>
+                <center class="logo"><span class="box-logo">MEGA</span><br/><span class="logo-span">Eventos</span></center>
+                <h:panelGrid columns="2" class="border">
+                    Evento: <h:inputText class="input" id="eventoTxt" value="#{pessoasBean.pessoa.evento}" p:placeholder="Festa do pijama" />
+                    Endereco: <h:inputText class="input" id="ederecoTxt" value="#{pessoasBean.pessoa.endereco}" p:placeholder="Rua 15 QD.30 N.75"/>
+                    UF: <h:inputText class="input" id="ufTxt" value="#{pessoasBean.pessoa.uf}" p:placeholder=""/>
+                    Cidade: <h:inputText class="input" id="cidadeTxt" value="#{pessoasBean.pessoa.cidade}" p:placeholder=""/>
+                    Data inicial: <h:inputText class="input" id="dataiTxt" value="#{pessoasBean.pessoa.datai}" p:placeholder="dd/mm/YYYY" />
+                    Data final: <h:inputText class="input" id="datafTxt" value="#{pessoasBean.pessoa.dataf}" p:placeholder="dd/mm/YYYY" />
+                    Email: <h:inputText class="input" id="emailTxt" value="#{pessoasBean.pessoa.email}" p:placeholder="mail@example.com" />
+                    Telefone: <h:inputText class="input" id="telefoneTxt" value="#{pessoasBean.pessoa.telefone}" p:placeholder="98 99999-9999" />
+                    <h:inputHidden/>
+                    <h:commandButton class="btn btn-green right" value="Cadastrar" action="#{pessoasBean.adicionarPessoa}"/>
+                </h:panelGrid>
+                <h:dataTable class="table" value="#{pessoasBean.listarPessoas()}" var="data" border="1">
+                    <h:column>
+                        <f:facet name="header">
+                            ID
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.id}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            EVENTO
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.evento}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            ENDERECO
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.endereco}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            UF - CIDADE
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.uf} - #{data.cidade}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            INICIO
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.datai}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            FIM
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.dataf}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            CONTATO
+                        </f:facet>
+                        <h:outputText class="td" value="#{data.telefone} / #{data.email}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            INGRESSO
+                        </f:facet>
+                        <h:commandButton class="btn btn-blue left" value="Ingresso" action="ingresso"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            AÇÕES
+                        </f:facet>
+                        <h:commandLink value="Remover" action="#{pessoasBean.removerPessoa(data)}"/>
+                         | <h:commandLink value="Alterar" action="#{pessoasBean.carregarPessoa(data)}"/>
+                    </h:column>
+                </h:dataTable>    
+            </h:form>
+            
+        </center>
+    </h:body>
+</html>
+
