@@ -17,10 +17,10 @@
                 <div class="guia no-print"><span class="box-guia">> Ingresso</span></div>
                 <h:panelGrid columns="2" class="cadastro-ingresso print">
                     Evento: <h:outputText id="eventoTxt" value="#{pessoasBean.pessoa.evento}" />
-                    Parcipante: <h:inputText class="input" id="participanteTxt" value="" p:placeholder="Fulano Beitrano Cicrano" />
-                    CPF: <h:inputText class="input" id="cpfTxt" value="" p:placeholder="123.456.789-11"/>
-                    Email: <h:inputText class="input" id="emailTxt" value="" p:placeholder="mail@example.com"/>
-                    Telefone: <h:inputText class="input" id="telefoneTxt" value="" p:placeholder="98 999999999"/>
+                    Parcipante: <h:inputText class="input" id="participanteTxt" p:placeholder="Fulano Beitrano Cicrano" />
+                    CPF: <h:inputText class="input" id="cpfTxt" p:placeholder="123.456.789-11"/>
+                    Email: <h:inputText class="input" id="emailTxt" p:placeholder="mail@example.com"/>
+                    Telefone: <h:inputText class="input" id="telefoneTxt" p:placeholder="98 999999999"/>
                     <h:inputHidden/>
                     <input type="button" class="btn btn-pink no-print" value="Imprimir" onclick="window.print();"/>
                 </h:panelGrid>
