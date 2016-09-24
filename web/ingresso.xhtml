@@ -22,10 +22,12 @@
                     Email: <h:inputText class="input" id="emailTxt" p:placeholder="mail@example.com"/>
                     Telefone: <h:inputText class="input" id="telefoneTxt" p:placeholder="98 999999999"/>
                     <h:inputHidden/>
-                    <input type="button" class="btn btn-pink no-print" value="Imprimir" onclick="window.print();"/>
+                    <br/><br/>
+                    <h:commandButton class="btn btn-small btn-blue no-print" value="Voltar" action="index" actionListener="#{pessoasBean.limpaDados()}"/>
+                    <input type="button" class="btn btn-big btn-pink no-print right" value="Imprimir" onclick="window.print();" />
                 </h:panelGrid>
-                <br/><br/>
-                <h:commandButton class="btn btn-blue no-print" value="Voltar" action="index" actionListener="#{pessoasBean.limpaDados()}"/>
+                <br/>
+                
             </h:form>
         </center>
     </h:body>

@@ -41,6 +41,10 @@ and open the template in the editor.
     .cadastro-ingresso {
         padding-top: 15% !important;
     }
+    .cadastro-ingresso .input, .cadastro-ingresso td {
+        width: 230px !important;
+        font-size: 12px;
+    }
 }
 
 
@@ -79,7 +83,7 @@ body, html {
     padding-top: 70px;
     width: 420px;
 }
-.cadastro-ingresso tr, .cadastro-ingresso td, .cadastro-ingresso input, .cadastro-ingresso span{
+.cadastro-ingresso tr, .cadastro-ingresso td, .cadastro-ingresso .input, .cadastro-ingresso span{
     color: #000 !important;
     width: 300px;
 }
@@ -144,6 +148,12 @@ body, html {
     text-decoration: none;
     margin: 10px 0;
 }
+.btn-small{
+    width: 90px;
+}
+.btn-big{
+    width: 250px;
+}
 .btn-green{
     background:green;
     color:#fff;
@@ -155,7 +165,7 @@ body, html {
 }
 .btn-pink{
     background:#ad4592;
-    color:#fff;
+    color:#fff !important;
     box-shadow:0 5px 0 #73308e;
 }
 .btn-pink:hover{
