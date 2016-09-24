@@ -16,14 +16,15 @@
                 <center class="logo no-print"><span class="box-logo">MEGA</span><br/><span class="logo-span">Eventos</span></center>
                 <div class="guia no-print"><span class="box-guia">> Ingresso</span></div>
                 <h:panelGrid columns="2" class="cadastro-ingresso print">
-                    Parcipante: <h:inputText class="input" id="eventoTxt" value="#{pessoasBean.pessoa.evento}" p:placeholder="Fulano Beitrano Cicrano" />
-                    CPF: <h:inputText class="input" id="cpfTxt" value="#{pessoasBean.pessoa.endereco}" p:placeholder="123.456.789-11"/>
-                    Email: <h:inputText class="input" id="emailTxt" value="#{pessoasBean.pessoa.endereco}" p:placeholder="mail@example.com"/>
-                    Telefone: <h:inputText class="input" id="telefoneTxt" value="#{pessoasBean.pessoa.uf}" p:placeholder="98 999999999"/>
+                    Evento: <h:outputText id="eventoTxt" value="#{pessoasBean.pessoa.evento}" />
+                    Parcipante: <h:inputText class="input" id="participanteTxt" value="" p:placeholder="Fulano Beitrano Cicrano" />
+                    CPF: <h:inputText class="input" id="cpfTxt" value="" p:placeholder="123.456.789-11"/>
+                    Email: <h:inputText class="input" id="emailTxt" value="" p:placeholder="mail@example.com"/>
+                    Telefone: <h:inputText class="input" id="telefoneTxt" value="" p:placeholder="98 999999999"/>
                     <h:inputHidden/>
                     <input type="button" class="btn btn-pink no-print" value="Imprimir" onclick="window.print();"/>
                 </h:panelGrid>
-                <br/><br/><br/><br/>
+                <br/><br/>
                 <h:commandButton class="btn btn-blue no-print" value="Voltar" action="index" actionListener="#{pessoasBean.limpaDados()}"/>
             </h:form>
         </center>

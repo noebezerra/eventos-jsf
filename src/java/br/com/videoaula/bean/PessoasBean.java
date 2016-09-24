@@ -44,6 +44,11 @@ public class PessoasBean {
         
         return "";
     }
+    // pegar dados
+    public String pegarIngresso(Pessoas p){
+        pessoa = p;
+        return "ingresso";
+    }
     // adiciona a pessoa
     public String adicionarPessoa(){
         pessoaDao.addPessoa(pessoa);

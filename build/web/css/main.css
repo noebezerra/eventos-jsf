@@ -76,10 +76,10 @@ body, html {
     position: relative;
 }
 .cadastro-ingresso{
-    padding-top: 10%;
+    padding-top: 70px;
     width: 420px;
 }
-.cadastro-ingresso tr, .cadastro-ingresso td, .cadastro-ingresso input{
+.cadastro-ingresso tr, .cadastro-ingresso td, .cadastro-ingresso input, .cadastro-ingresso span{
     color: #000 !important;
     width: 300px;
 }
